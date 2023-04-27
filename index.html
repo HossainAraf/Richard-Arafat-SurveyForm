@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
+    <title>Fork Me! FCC: Test Suite Template</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-</head>
-<body>git 
-    <h1 id = "title"> This is our suevey form  </h1>
-    <p id = "description"></p>
-    <form id = "survey-form" action="" >
-        <label id = "name-label" for=""> Name</label> <br>
-        <input id = "name" type="text" placeholder = "Enter your name"> <br>
-        <label id = "email-label" for=""> Email</label> <br>
-        <input id = "email" type="email" placeholder = "Enter your Email ID"> <br>
-        <label id = "number-label" for=""> Age </label> <br>
-        <input id = "number" type="text" min ="8" max ="99" placeholder = "Enter your Age">
-        <p>Which Option best describes your current role?</p>
-        <select name="" id="dropdown">
-            <option value="">Option A</option>
-            <option value="">Option B</option>
-        </select>
-    </form>
-    
-</body>
+  <body>
+    <h1 id="title">Sample Survey form</h1>
+   <p id = "description">Thank your for taking the time.</p>
+   <form id ="survey-form" action="survey-form">
+    <label id = "name-label" for="name">Name:</label><br>
+    <input id = "name" type="text" name = "name" placeholder=" Write down your name" required><br>
+    <label id = "email-label" for="email">Email:</label><br>
+    <input id = "email" type="email"  pattern=".+@gmail\.com" size="30" placeholder=" Write down your Email id" required><br>
+    <label id = "number-label" for ="number">Age:</label><br>
+    <input id = "number" type="number"  min = "1" max="160" placeholder=" Write down your age" required>
+    <p>Which stage best describes your current position?</p>
+    <select id="dropdown"> 
+      <option disabled selected value>Select from the below list</option>
+      <option value = "student">Microverse student</option>
+      <option value = "profession">Engineer</option>
+      <option value = "aspiration">Inventor</option>
+    </select>
+    <p>Would you recommend Microverse to a friend?</p>
+    <label>
+      <input name = "group-recommend" value = "Yes, I would!"
+      type = "radio" checked>"Yes, I would!"<br>
+    </label>
+    <label>
+      <input name = "group-recommend" value = "Well...probably not"
+    type = "radio" checked>
+    "Well...probably not"<br>
+    </label>
+    <label>
+      <input name = "group-recommend" value = "Heck no!!"
+    type = "radio" checked>
+    "Heck no!!"<br>
+    </label>
+    <p>What are your favorite aspects about Microverse?</p>
+    <label>
+      <input name = "liked" value = "Collaborative learning" 
+      type = "checkbox">
+      "Collaborative learning"<br>
+    </label>
+    <label>
+      <input name = "liked" value = "Nuturing community" 
+      type = "checkbox">
+      "Nuturing community"<br>
+    </label>
+    <label>
+      <input name = "liked" value = "Remote employment" 
+      type = "checkbox">
+      "Remote Employment"<br>
+    </label>
+    <label>
+      <input name = "liked" value = "Distance learning" 
+      type = "checkbox">
+      "Distance learning"<br>
+    </label>
+    <p>Do you have any complaints or insights?</p>
+    <textarea id = "complaint" name = "comment" 
+    placeholder="Enter your inspiration here...."></textarea><br>
+    <button type="submit" id="submit">
+      Submit
+    </button>
+
+   </form>
+
+
+    <script  src="js/index.js"></script>
+
+  </body>
 </html>
